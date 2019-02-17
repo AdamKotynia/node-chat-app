@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 
 const publicPath = path.join(__dirname, '../public');
-const port = process.env.port;
+const port = process.env.PORT || 3000;
 
 let app = express();
 
@@ -12,5 +12,3 @@ app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });
 
-console.log(__dirname + '/../public');
-console.log(publicPath);
